@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumi — a Japanese vocabulary camera</title>
+<meta name="description" content="Lumi turns any Japanese text you photograph — manga, games, signs, menus — into flashcards with readings, meanings, and example sentences, reviewed with FSRS‑6 scheduling right from a Home Screen widget. Native iOS, on-device OCR, offline dictionaries.">
+
+<link rel="icon" type="image/png" href="assets/icon-light-64.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="assets/icon-dark-64.png" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" href="assets/icon-light-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="brand">
+      <img class="logo-light" src="assets/icon-light-64.png" alt="">
+      <img class="logo-dark" src="assets/icon-dark-64.png" alt="">
+      Lumi
+    </a>
+    <nav class="nav__links">
+      <a href="#how">How it works</a>
+      <a href="#screens">Screens</a>
+      <a href="#review">Review</a>
+      <a href="#companion">Companion</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero wrap">
+    <div class="hero__grid">
+      <div>
+        <div class="eyebrow">A Japanese vocabulary camera</div>
+        <h1>Photograph a word.<br>Walk away with a flashcard.</h1>
+        <p class="lede">
+          Lumi turns manga panels, game menus, street signs — anything with
+          Japanese text — into a personal vocabulary deck. Point your camera,
+          tap the words you don't know, and Lumi builds the flashcard for
+          you: reading, meaning, example sentence, and the exact photo it
+          came from.
+        </p>
+        <div class="hero__badges">
+          <span class="badge">iOS · SwiftUI</span>
+          <span class="badge">On‑device OCR</span>
+          <span class="badge">Works offline</span>
+        </div>
+        <a href="#how" class="scroll-cue">See how it works ↓</a>
+      </div>
+
+      <div class="hero__visual">
+        <div class="phone">
+          <div class="phone__screen">
+            <div class="phone__island"></div>
+            <div class="phone__topbar"><span>9:41</span><span>●●●</span></div>
+            <div class="phone__content">
+              <div class="screen-title" style="text-align:left;margin-top:6px;">Capture</div>
+              <div class="capture-photo">
+                <span class="chip noun">天気</span>
+                <span class="chip verb">いい</span>
+                <span class="chip adj">今日</span>
+                <span class="chip adv">は</span>
+              </div>
+              <div class="capture-legend">
+                <span><i class="dot noun"></i>noun</span>
+                <span><i class="dot verb"></i>verb</span>
+                <span><i class="dot adj"></i>adj.</span>
+                <span><i class="dot adv"></i>adv.</span>
+              </div>
+              <div class="capture-addbtn">Add 4 &amp; Next Photo</div>
+            </div>
+            <div class="phone__tabbar">
+              <div class="tabitem">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M9 6l1.5-2h3L15 6"/></svg>
+                Cards
+              </div>
+              <div class="tabitem active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.4"/><path d="M8 7l1.4-2.2h5.2L16 7"/></svg>
+                Capture
+              </div>
+              <div class="tabitem">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="12" height="16" rx="2"/><path d="M9 20h9a2 2 0 0 0 2-2V6"/></svg>
+                Library
+              </div>
+              <div class="tabitem">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg>
+                Dex
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="loop wrap" id="how">
+    <div class="section-head reveal">
+      <div class="eyebrow">The loop</div>
+      <h2>Four tabs. One habit: see it, capture it, know it.</h2>
+      <p>Lumi is built around a simple cycle — the same one whether you're
+      mining vocab from a manga chapter or a Switch RPG's menu text.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <span class="step__num">01</span>
+        <div class="step__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.4"/><path d="M8 7l1.4-2.2h5.2L16 7"/></svg>
+        </div>
+        <h3>Capture</h3>
+        <p>Snap a photo of anything with Japanese text. On‑device OCR reads
+        it and MeCab splits it into real, deinflected words (食べた →
+        食べる) — shown as tappable chips colored by part of speech.
+        Chain straight through a whole page with "Next Photo," and every
+        capture is location‑tagged for later.</p>
+      </div>
+
+      <div class="step reveal">
+        <span class="step__num">02</span>
+        <div class="step__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M9 6l1.5-2h3L15 6"/></svg>
+        </div>
+        <h3>Cards</h3>
+        <p>Tap the words you don't know. Each becomes a flashcard with an
+        auto‑generated reading, a JMdict definition, a Tatoeba example
+        sentence, and text‑to‑speech — filed into a deck of your choosing,
+        with the exact photo and sentence it was mined from.</p>
+      </div>
+
+      <div class="step reveal">
+        <span class="step__num">03</span>
+        <div class="step__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg>
+        </div>
+        <h3>Dex</h3>
+        <p>Every kanji you've captured lights up on a field‑guide grid — a
+        Pokédex for the language you're actually reading. Focus the hunt on
+        a JLPT level, or jump straight from any kanji to the exact cards
+        and photos where you caught it.</p>
+      </div>
+
+      <div class="step reveal">
+        <span class="step__num">04</span>
+        <div class="step__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="12" height="16" rx="2"/><path d="M9 20h9a2 2 0 0 0 2-2V6"/></svg>
+        </div>
+        <h3>Library</h3>
+        <p>Photos you haven't mined yet wait in your Inbox, bundled into
+        sessions by time and place. Swipe through at your own pace — commit
+        a page's words, or snooze it for later.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="features wrap" id="features">
+    <div class="section-head reveal">
+      <div class="eyebrow">Under the hood</div>
+      <h2>Small, deliberate details for real mining sessions.</h2>
+      <p>Built for reading manga on the couch and games on the go — not for
+      typing words into a search box.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature reveal">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.4"/></svg></div>
+        <h3>On‑device OCR &amp; tokenization</h3>
+        <p>VisionKit reads vertical and horizontal Japanese reliably; MeCab
+        segments and deinflects (食べた → 食べる) so cards store dictionary
+        forms, not conjugated fragments.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg></div>
+        <h3>Bundled dictionaries &amp; audio</h3>
+        <p>JMdict definitions and Tatoeba example sentences ship inside the
+        app, with text‑to‑speech playback — instantly, no network round
+        trip required.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.07 0l1.93-1.93a5 5 0 0 0-7.07-7.07L10.5 5.5"/><path d="M14 11a5 5 0 0 0-7.07 0L5 12.93a5 5 0 0 0 7.07 7.07L13.5 18.5"/></svg></div>
+        <h3>Source‑linked cards</h3>
+        <p>Every card remembers the sentence it was clipped from and the
+        photo behind it — so "where did I even see this word" is never a
+        question.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="7" height="16" rx="1.5"/><rect x="14" y="4" width="7" height="9" rx="1.5"/></svg></div>
+        <h3>Custom decks</h3>
+        <p>Travel words, a specific game, a show you're watching — pick or
+        create a deck right from the capture flow, with your last choice
+        remembered.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg></div>
+        <h3>Sessions by time &amp; place</h3>
+        <p>Captures cluster automatically into sessions — "today," "the
+        café," "that manga volume" — browsable later on a map of everywhere
+        you've mined.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3.5v5.2c0 4.8-3 8.7-7 9.8-4-1.1-7-5-7-9.8V6.5z"/></svg></div>
+        <h3>Privacy by default</h3>
+        <p>Capture, dictionary lookup, and review all run entirely
+        on‑device — no account, no cloud dependency. Your library stays on
+        your phone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCREENS ============ -->
+  <section class="screens wrap" id="screens">
+    <div class="section-head reveal">
+      <div class="eyebrow">A closer look</div>
+      <h2>Three screens, one habit.</h2>
+      <p>Recreated here at 1:1 with the app's actual layout and color
+      system.</p>
+    </div>
+
+    <div class="screen-row">
+
+      <div class="screen-card reveal">
+        <div class="phone">
+          <div class="phone__screen">
+            <div class="phone__island"></div>
+            <div class="phone__topbar"><span>9:41</span><span>●●●</span></div>
+            <div class="phone__content">
+              <div class="screen-title">Cards</div>
+              <div class="screen-sub">6,000 mined · alphabetized by reading</div>
+              <div class="kana-head">あ</div>
+              <div class="cardrow">
+                <div class="cardrow__thumb"></div>
+                <div><div class="cardrow__word">挨拶</div><div class="cardrow__reading">あいさつ · 3d ago</div></div>
+              </div>
+              <div class="cardrow">
+                <div class="cardrow__thumb"></div>
+                <div><div class="cardrow__word">青い</div><div class="cardrow__reading">あおい · 2d ago</div></div>
+              </div>
+              <div class="cardrow">
+                <div class="cardrow__thumb"></div>
+                <div><div class="cardrow__word">明日</div><div class="cardrow__reading">あした · 2d ago</div></div>
+              </div>
+              <div class="kana-head">か</div>
+              <div class="cardrow">
+                <div class="cardrow__thumb"></div>
+                <div><div class="cardrow__word">開ける</div><div class="cardrow__reading">あける · 4d ago</div></div>
+              </div>
+            </div>
+            <div class="phone__tabbar">
+              <div class="tabitem active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M9 6l1.5-2h3L15 6"/></svg>
+                Cards
+              </div>
+              <div class="tabitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.4"/></svg>Capture</div>
+              <div class="tabitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="12" height="16" rx="2"/><path d="M9 20h9a2 2 0 0 0 2-2V6"/></svg>Library</div>
+              <div class="tabitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg>Dex</div>
+            </div>
+          </div>
+        </div>
+        <div class="screen-card__label">Cards</div>
+        <div class="screen-card__desc">Search, browse, and review the whole deck — kana‑indexed, just like a paper dictionary.</div>
+      </div>
+
+      <div class="screen-card reveal">
+        <div class="phone">
+          <div class="phone__screen">
+            <div class="phone__island"></div>
+            <div class="phone__topbar"><span>9:41</span><span>●●●</span></div>
+            <div class="phone__content">
+              <div class="screen-title">Dex</div>
+              <div class="screen-sub">1,204 of 2,136 kanji captured</div>
+              <div class="dexgrid">
+                <div class="dexcell faint">一</div><div class="dexcell faint">二</div><div class="dexcell faint">三</div><div class="dexcell got">四</div><div class="dexcell got">人</div>
+                <div class="dexcell got">日</div><div class="dexcell got">月</div><div class="dexcell got">火</div><div class="dexcell got">水</div><div class="dexcell faint">木</div>
+                <div class="dexcell got">出</div><div class="dexcell got">来</div><div class="dexcell got">気</div><div class="dexcell faint">分</div><div class="dexcell faint">好</div>
+                <div class="dexcell faint">座</div><div class="dexcell got">学</div><div class="dexcell faint">校</div><div class="dexcell faint">年</div><div class="dexcell faint">時</div>
+              </div>
+            </div>
+            <div class="phone__tabbar">
+              <div class="tabitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M9 6l1.5-2h3L15 6"/></svg>Cards</div>
+              <div class="tabitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.4"/></svg>Capture</div>
+              <div class="tabitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="12" height="16" rx="2"/><path d="M9 20h9a2 2 0 0 0 2-2V6"/></svg>Library</div>
+              <div class="tabitem active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg>Dex</div>
+            </div>
+          </div>
+        </div>
+        <div class="screen-card__label">Dex</div>
+        <div class="screen-card__desc">A field guide of every kanji you've met in the wild, filling in as you read.</div>
+      </div>
+
+      <div class="screen-card reveal">
+        <div class="phone">
+          <div class="phone__screen">
+            <div class="phone__island"></div>
+            <div class="phone__topbar"><span>9:41</span><span>●●●</span></div>
+            <div class="phone__content">
+              <div class="screen-title">Capture</div>
+              <div class="screen-sub">Chip mode · 4 new words found</div>
+              <div class="capture-photo" style="height:190px;">
+                <span class="chip noun">天気</span>
+                <span class="chip verb">いい</span>
+                <span class="chip adj">今日</span>
+                <span class="chip adv">は</span>
+              </div>
+              <div class="capture-legend">
+                <span><i class="dot noun"></i>noun</span>
+                <span><i class="dot verb"></i>verb</span>
+                <span><i class="dot adj"></i>adj.</span>
+                <span><i class="dot adv"></i>adv.</span>
+              </div>
+              <div class="capture-addbtn">Add 4 &amp; Next Photo</div>
+            </div>
+            <div class="phone__tabbar">
+              <div class="tabitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M9 6l1.5-2h3L15 6"/></svg>Cards</div>
+              <div class="tabitem active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.4"/></svg>Capture</div>
+              <div class="tabitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="12" height="16" rx="2"/><path d="M9 20h9a2 2 0 0 0 2-2V6"/></svg>Library</div>
+              <div class="tabitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg>Dex</div>
+            </div>
+          </div>
+        </div>
+        <div class="screen-card__label">Capture</div>
+        <div class="screen-card__desc">Tap the words you don't know. Everything else stays locked and out of the way.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ NO DREAD / REVIEW ============ -->
+  <section class="dread wrap" id="review">
+    <div class="section-head reveal">
+      <div class="eyebrow">No Anki dread</div>
+      <h2>Review a card without ever opening the app.</h2>
+      <p>Lumi is built to avoid the giant scary due‑count that makes most
+      spaced‑repetition apps easy to abandon.</p>
+    </div>
+
+    <div class="dread__grid">
+      <ul class="dread__list reveal">
+        <li><strong>FSRS‑6 scheduling</strong> — the same modern algorithm behind Anki's current default scheduler, not the older SM‑2 math most flashcard apps still ship. Each deck runs its own independent due/new queue.</li>
+        <li><strong>Bounded, resumable sessions</strong> — configurable daily new‑card limits and review caps, so a session never turns into an unbounded slog. Stop after two cards, no guilt.</li>
+        <li><strong>Home Screen &amp; Lock Screen widgets</strong> — a single due or new card with quick grading buttons, reviewed without even opening the app.</li>
+        <li><strong>Action Button &amp; Control Center</strong> — one press into your next card, or a straight line into the camera.</li>
+      </ul>
+
+      <div class="widget-mock reveal">
+        <div class="widget-mock__head">
+          <img class="logo-light" src="assets/icon-light-64.png" alt="">
+          <img class="logo-dark" src="assets/icon-dark-64.png" alt="">
+          Lumi · 24 due today
+        </div>
+        <div class="widget-mock__word">眠い</div>
+        <div class="widget-mock__reading">ねむい</div>
+        <div class="widget-mock__meaning">adj. — sleepy, drowsy</div>
+        <div class="widget-mock__grades">
+          <div class="grade again">Again<small>10m</small></div>
+          <div class="grade hard">Hard<small>1d</small></div>
+          <div class="grade good">Good<small>3d</small></div>
+          <div class="grade easy">Easy<small>7d</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPANION ============ -->
+  <section class="companion wrap" id="companion">
+    <div class="section-head reveal">
+      <div class="eyebrow">Motivation, not guilt</div>
+      <h2>A companion that roots for you — and a streak you can see.</h2>
+      <p>Progress that rewards showing up, without punishing a missed day.</p>
+    </div>
+
+    <div class="companion__grid">
+      <div class="pet-card reveal">
+        <svg class="pet-blob" viewBox="0 0 120 120" width="120" height="120" aria-hidden="true">
+          <defs>
+            <linearGradient id="petGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="var(--orange)"/>
+              <stop offset="1" stop-color="#ffb08f"/>
+            </linearGradient>
+          </defs>
+          <path d="M60 8c28 0 46 20 46 46 0 30-18 58-46 58S14 84 14 54C14 28 32 8 60 8Z" fill="url(#petGradient)"/>
+          <circle cx="46" cy="56" r="5" fill="#23292e"/>
+          <circle cx="76" cy="56" r="5" fill="#23292e"/>
+          <path d="M50 72q10 8 20 0" stroke="#23292e" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div class="pet-card__mood">Feeling great — 6 day streak</div>
+        <div class="pet-card__desc">Reviewing, capturing, or clearing your Inbox all feed it. It never dies and never resets from neglect — at worst it looks a little sad until you're back.</div>
+      </div>
+
+      <div class="heatmap-card reveal">
+        <div class="heatmap-card__label">Mining &amp; review activity</div>
+        <div class="heatmap" id="heatmap"></div>
+        <div class="heatmap-card__legend">
+          Less
+          <span class="lvl lvl0"></span><span class="lvl lvl1"></span><span class="lvl lvl2"></span><span class="lvl lvl3"></span><span class="lvl lvl4"></span>
+          More
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CRAFT ============ -->
+  <section class="craft">
+    <div class="wrap reveal">
+      <div class="eyebrow">Native, on‑device, offline‑first</div>
+      <h2>Built as a proper native app — not a wrapper around a web view or a cloud API.</h2>
+      <p>Lumi replaced a clumsy iOS Shortcut (camera → OCR → clipboard →
+      paste into a browser) with a real SwiftUI app. Every mining session
+      runs entirely on‑device: no photo, sentence, or word ever needs to
+      leave the phone to become a flashcard.</p>
+      <dl class="craft-stats">
+        <div class="craft-stat"><dt>Framework</dt><dd>SwiftUI + SwiftData</dd></div>
+        <div class="craft-stat"><dt>OCR engine</dt><dd>VisionKit ImageAnalyzer</dd></div>
+        <div class="craft-stat"><dt>Tokenizer</dt><dd>MeCab (IPADic)</dd></div>
+        <div class="craft-stat"><dt>Dictionaries</dt><dd>JMdict + Tatoeba, bundled</dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img class="logo-light" src="assets/icon-light-64.png" alt="" width="24" height="24">
+      <img class="logo-dark" src="assets/icon-dark-64.png" alt="" width="24" height="24">
+      Lumi
+    </div>
+    <p>Designed &amp; built by ultish · in active development · not yet on the App Store</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
