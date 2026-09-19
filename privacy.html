@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Lumi</title>
+<meta name="description" content="Lumi's privacy policy: what stays on your device, what syncs through your own iCloud, and what we never collect.">
+
+<link rel="icon" type="image/png" href="assets/icon-light-64.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="assets/icon-dark-64.png" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" href="assets/icon-light-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<style>
+  .legal { padding: 64px 0 80px; }
+  .legal .wrap { max-width: 760px; }
+  .legal h1 { font-size: clamp(28px, 4.2vw, 40px); margin-bottom: 8px; }
+  .legal .updated { color: var(--ink-faint); font-size: 14px; font-weight: 600; margin: 0 0 40px; }
+  .legal h2 { font-size: 20px; font-weight: 800; margin: 40px 0 12px; letter-spacing: -0.01em; }
+  .legal p, .legal li { font-size: 16px; line-height: 1.7; color: var(--ink-soft); }
+  .legal ul { margin: 0 0 16px; padding-left: 22px; }
+  .legal li { margin-bottom: 8px; }
+  .legal strong { color: var(--ink); }
+  .legal a { color: var(--orange); font-weight: 700; text-decoration: none; }
+  .legal a:hover { text-decoration: underline; }
+  .back-link { display: inline-block; margin-bottom: 28px; font-size: 14px; font-weight: 700; color: var(--ink-faint); text-decoration: none; }
+  .back-link:hover { color: var(--orange); }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html#top" class="brand">
+      <img class="logo-light" src="assets/icon-light-64.png" alt="">
+      <img class="logo-dark" src="assets/icon-dark-64.png" alt="">
+      Lumi
+    </a>
+    <nav class="nav__links">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#screens">Screens</a>
+      <a href="index.html#review">Review</a>
+      <a href="index.html#companion">Companion</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="legal wrap">
+    <a href="index.html#top" class="back-link">← Back to Lumi</a>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated September 19, 2026</p>
+
+    <p>Lumi is a Japanese vocabulary camera you use by yourself, for yourself. This page explains, plainly, what the app does and doesn't do with your data.</p>
+
+    <h2>The short version</h2>
+    <ul>
+      <li>Your photos, flashcards, decks, and review history stay on your device and sync only through <strong>your own private iCloud account</strong> — never through our servers, because we don't run any.</li>
+      <li>Text recognition (OCR) and dictionary lookups run <strong>entirely on your device</strong>, offline. Nothing about what you photograph or study is sent anywhere for processing.</li>
+      <li>There's no account, no login, no ads, and no analytics or tracking SDKs of any kind.</li>
+    </ul>
+
+    <h2>What Lumi stores</h2>
+    <p>Everything below is created by you, using the app, and stored in Lumi's own data store on your device:</p>
+    <ul>
+      <li><strong>Photos you capture</strong> — the images you take to mine vocabulary from, kept alongside the flashcards they produced.</li>
+      <li><strong>Location (optional)</strong> — if you allow it, a capture's approximate location is saved so your library can be grouped by place. Camera and Location access are requested separately by iOS, and Lumi works fully without granting Location.</li>
+      <li><strong>Flashcards, decks, and review history</strong> — the words you save, the decks you sort them into, and your spaced-repetition (FSRS) scheduling data.</li>
+    </ul>
+
+    <h2>Where your data lives</h2>
+    <p>Lumi stores everything locally on your iPhone. If you're signed in to iCloud, your data also syncs through Apple's CloudKit to your other devices, using the private, encrypted iCloud database associated with your own Apple ID. We do not have our own servers, and we cannot see, access, or receive a copy of your data at any point.</p>
+
+    <h2>On-device processing</h2>
+    <p>Text recognition uses Apple's Vision framework and Google ML Kit's on-device text recognition model — both run locally and don't send your photos or recognized text to Apple's, Google's, or anyone else's servers. Dictionary definitions (JMdict) and example sentences (Tatoeba) are bundled with the app itself, so looking up a word never requires a network connection.</p>
+
+    <h2>What we don't do</h2>
+    <ul>
+      <li>No user accounts, sign-ups, or logins of any kind.</li>
+      <li>No advertising, and no ad networks.</li>
+      <li>No analytics, crash reporting, or tracking SDKs — nothing in Lumi tracks you across other apps or websites, so it never asks for App Tracking Transparency permission.</li>
+      <li>No selling, renting, or sharing of your data with third parties, ever.</li>
+    </ul>
+
+    <h2>Sharing you control</h2>
+    <p>Lumi can export a deck as an Anki package (.apkg) or hand a photo to iOS's own Share Sheet. Both only happen when you explicitly choose to do so, and only send data wherever you personally direct it — Lumi itself never initiates a transfer on its own.</p>
+
+    <h2>Children's privacy</h2>
+    <p>Lumi is not directed at children and does not knowingly collect personal information from children. Since Lumi has no accounts and no data collection beyond what's described above, no data ever leaves your device except through your own iCloud sync.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, we'll update the date at the top of this page.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy? Open an issue at <a href="https://github.com/ultish/lumi-page/issues">github.com/ultish/lumi-page/issues</a>.</p>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img class="logo-light" src="assets/icon-light-64.png" alt="" width="24" height="24">
+      <img class="logo-dark" src="assets/icon-dark-64.png" alt="" width="24" height="24">
+      Lumi
+    </div>
+    <p>Designed &amp; built by ultish</p>
+  </div>
+</footer>
+
+</body>
+</html>
